@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesudo element</title>
+    <style>
+        h1::before{
+            content:"Hello";
+            color: lime;
+        }
+        h1::after{
+            content:"gelo";
+            color: limegreen;
+            
+        }
+        blockquote::before{
+            content:open-quote ;
+            color:fuchsia;
+            font-size: 1.5em;
+        }
+        blockquote::after{
+            content:close-quote ;
+            color:fuchsia;
+            font-size: 1.5em;
+        }
+        .section-title{
+            display: inline-block;
+        }
+        
+        
+        .section-title::after,.section-title:hover::before{
+            content: '';
+            display: block;
+            background-color: lightcoral;
+            height: 3px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Having fun with pesudo vai</h1>
+    <h1>Having fun with pesudo vai</h1>
+</body>
+<section>
+    <h2 class="section-title">Best Quotes</h2>
+    <blockquote>Knowledge will not attract money, unless it is organized, and intelligently directed, through practical plans of action, to the definite end of accumulation of money. </blockquote>
+    <blockquote>No one ever is defeated until defeat has been accepted as reality.</blockquote>
+</section>
+</html>
